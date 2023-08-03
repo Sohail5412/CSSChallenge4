@@ -1,0 +1,127 @@
+<style>
+    /* Base Styles */ 
+    /* Apply box-sizing to all elements */
+    * {
+        box-sizing: border-box;
+    }
+
+    /* Set default font-size and line-height for entire website */
+    html {
+        font: 1em/1.2 Arial, Helvetica, sans-serif; /* reduced from 1.2em/1.4 */
+    }
+
+    /* Add padding to bottom of the body to separate content from bottom of the viewport */
+    body {
+        padding: 0 0 1em;
+    }
+
+    /* Styling for the header */
+    header {
+        background-color: #333; /* dark background for better readability of white text */
+        color: #fff; /* white text color */
+        border: 5px solid #000; /* black border */
+    }
+
+    /* Remove list styles from nav ul */
+    header ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    /* Styling for the nav links */
+    header a {
+        color: #fff; /* white text color */
+        text-decoration: none; /* remove underline */
+        display: block;
+        padding: 0.5em 1em; /* add padding for better readability */
+        border-top: 1px solid #999; /* light grey border on top */
+    }
+
+    /* Styling for the website title */
+    header .title {
+        font-size: 150%; /* make title larger than normal text */
+        font-style: italic; /* italicize title */
+        font-weight: bold; /* make title bold */
+        padding: 1em; /* add padding around title */
+    }
+
+    /* Add padding to the main content area */
+    main {
+        padding: 0 1em;
+    }
+
+    /* Remove list styles from .cards */
+    .cards {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    /* Styling for each card */
+    .cards li {
+        border: 5px solid #000; /* black border */
+        margin-bottom: 1em; /* space between cards */
+    }
+
+    /* Styling for the card title */
+    .cards h2 {
+        background-color: #333; /* dark background for better readability of white text */
+        color: #fff; /* white text color */
+        margin: 0; /* remove default margin */
+        padding: 0.5em 1em; /* add padding for better readability */
+    }
+
+    /* Add padding to the content inside each card */
+    .cards .inner {
+        padding: 0.5em 1em;
+    }
+
+    /* Styling for the sidebar */
+    .sidebar {
+        background-color: #333; /* dark background for better readability of white text */
+        border: 5px solid #000; /* black border */
+        padding: 0.5em 1em; /* add padding for better readability */
+        color: #fff; /* white text color */
+    }
+
+    /* Responsive Styles for larger screens (min-width 768px) */
+    @media (min-width: 768px) {
+        /* Desktop Styles */
+        /* Make header flex container to position title and nav side by side */
+        header {
+            display: flex;
+            justify-content: space-between; /* distribute space evenly between title and nav */
+            align-items: center; /* center items vertically */
+        }
+
+        /* Position nav links side by side */
+        header nav ul {
+            display: flex;
+        }
+
+        /* Remove border from nav links */
+        header nav ul li {
+            border: none;
+        }
+
+        /* Make main content area grid container */
+        main {
+            display: grid;
+            grid-template-columns: 3fr 1fr; /* 3:1 ratio for main content and sidebar */
+            gap: 1em; /* space between main content and sidebar */
+        }
+
+        /* Position cards in 2 columns */
+        .cards {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1em; /* space between cards */
+        }
+
+        /* Remove bottom margin from cards */
+        .cards li {
+            margin-bottom: 0;
+        }
+    }
+</style>
